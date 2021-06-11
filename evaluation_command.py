@@ -1,6 +1,5 @@
 ﻿# -*- encoding: utf-8 -*-
 import jellyfish
-import itertools 
 import argparse
 
 def read_in(textfilename): #this gives us a master read-in function, this reads in the file
@@ -85,7 +84,7 @@ while counter < 10001:
 def main():
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--src", help="your translated file" ,required=True) # 
-	parser.add_argument("--tgt", help="your target file" ,required=False) #
+	parser.add_argument("--tgt", help="your target file" ,required=True) #
 	args = parser.parse_args()
 	if args:
 		eval(args.src,args.tgt)
