@@ -127,7 +127,7 @@ def train_output(listname,name): ### we create a custom function that does all o
 		if counter == 10:	 #10 goes to value
 			value.append(word)
 			counter = 0 #counter is reset
-	textfilename_training ='data\\train\\' + str(name)+'_training'+ '.txt' # creates the filename of the training file, using the 'name' input in the function
+	textfilename_training ='data\\' + str(name)+'_training'+ '.txt' # creates the filename of the training file, using the 'name' input in the function
 	textfile_training = open(textfilename_training,'w+',encoding='utf-8') #opens a new file, called name_training
 	c=0
 	for element in training: #iterates over the list of training items
@@ -139,7 +139,7 @@ def train_output(listname,name): ### we create a custom function that does all o
 			textfile_training.write(element) #writes in the file
 	textfile_training.close() #close the file
 	################################################### rinse and repeat for testing
-	textfilename_test = 'data\\test\\' +str(name)+'_test'+ '.txt' #defines the name of the textfile
+	textfilename_test = 'data\\' +str(name)+'_test'+ '.txt' #defines the name of the textfile
 	textfile_test = open(textfilename_test,'w+',encoding='utf-8') #opens a new file
 	d=0
 	for element in test: #iterates over the list
@@ -152,7 +152,7 @@ def train_output(listname,name): ### we create a custom function that does all o
 	textfile_test.close()
 	################################################################### and again vor valuation
 	textfilename_val = str(name)+'_val'+ '.txt' #defines the name of the textfile
-	textfile_val = open('data\\val\\' +textfilename_val,'w+',encoding='utf-8') #opens a new file
+	textfile_val = open('data\\' +textfilename_val,'w+',encoding='utf-8') #opens a new file
 	i=0
 	for element in value: #iterates over the list
 		i+=1 #creating a counter so we dont have a trailing newline at the end of the file

@@ -1,0 +1,20 @@
+
+## Where the vocab(s) will be written
+src_vocab: data/french_port_span_vocab.txt
+tgt_vocab: data/italian_vocab.txt
+# Prevent overwriting existing files in the folder
+overwrite: False
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: data/concatenate_fre_po_sp_input.txt
+        path_tgt: data/italian_training_res.txt
+    valid:
+        path_src: data/concatenate_fre_po_sp_val.txt
+        path_tgt: data/italian_val_res.txt
+
+save_model: models/fre_po_sp/model
+save_checkpoint_steps: 200
+train_steps: 10000
+valid_steps: 500

@@ -12,23 +12,23 @@ def read_in(textfilename): #this gives us a master read-in function, this reads 
 	return listvar
 
 ##############reading in the files
-french_training = read_in('french_training_res')
-spanish_training = read_in('spanish_training_res')
-romanian_training = read_in('romanian_training_res')
-portuguese_training = read_in('portuguese_training_res')
-italian_training = read_in('italian_training_res')
+french_training = read_in('data\\french_training_res')
+spanish_training = read_in('data\\spanish_training_res')
+romanian_training = read_in('data\\romanian_training_res')
+portuguese_training = read_in('data\\portuguese_training_res')
+italian_training = read_in('data\\italian_training_res')
 
-french_val = read_in('french_val_res')
-spanish_val = read_in('spanish_val_res')
-romanian_val = read_in('romanian_val_res')
-portuguese_val = read_in('portuguese_val_res')
-italian_val = read_in('italian_val_res')
+french_val = read_in('data\\french_val_res')
+spanish_val = read_in('data\\spanish_val_res')
+romanian_val = read_in('data\\romanian_val_res')
+portuguese_val = read_in('data\\portuguese_val_res')
+italian_val = read_in('data\\italian_val_res')
 
-french_test = read_in('french_test_res')
-spanish_test = read_in('spanish_test_res')
-romanian_test = read_in('romanian_test_res')
-portuguese_test = read_in('portuguese_test_res')
-italian_test = read_in('italian_test_res')
+french_test = read_in('data\\french_test_res')
+spanish_test = read_in('data\\spanish_test_res')
+romanian_test = read_in('data\\romanian_test_res')
+portuguese_test = read_in('data\\portuguese_test_res')
+italian_test = read_in('data\\italian_test_res')
 
 
 
@@ -57,7 +57,7 @@ def concatenatecomplexv2(filename, listname1,listname2,listname3,listname4):
 		newstring = interspace_strings(newstring)
 		newlist.append(newstring)
 	#print(newlist)
-	textfilename_complex = filename + '.txt' # creates the filename of the training file, using the 'name' input in the function
+	textfilename_complex = 'data\\' + filename + '.txt' # creates the filename of the training file, using the 'name' input in the function
 	textfile_complex = open(textfilename_complex,'w+',encoding='utf-8')
 	c=0
 	for element in newlist: #iterates over the list of training items
@@ -82,7 +82,7 @@ def concatenatecomplex_triple(filename, listname1,listname2,listname3):
 		newstring = interspace_strings(newstring)
 		newlist.append(newstring)
 	#print(newlist)
-	textfilename_complex = filename + '.txt' # creates the filename of the training file, using the 'name' input in the function
+	textfilename_complex = 'data\\' + filename + '.txt' # creates the filename of the training file, using the 'name' input in the function
 	textfile_complex = open(textfilename_complex,'w+',encoding='utf-8')
 	c=0
 	for element in newlist: #iterates over the list of training items
@@ -107,7 +107,7 @@ def concatenatecomplex_duple(filename, listname1,listname2):
 		newstring = interspace_strings(newstring)
 		newlist.append(newstring)
 	#print(newlist)
-	textfilename_complex = filename + '.txt' # creates the filename of the training file, using the 'name' input in the function
+	textfilename_complex = 'data\\' + filename + '.txt' # creates the filename of the training file, using the 'name' input in the function
 	textfile_complex = open(textfilename_complex,'w+',encoding='utf-8')
 	c=0
 	for element in newlist: #iterates over the list of training items

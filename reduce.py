@@ -1,7 +1,7 @@
 ﻿# -*- encoding: utf-8 -*-
 
 def read_in(textfilename): #this gives us a master read-in function, this reads in the file
-	file = str(textfilename) + '.txt'# and then splits the file on newline, and then puts that into a list
+	file = 'data\\' + str(textfilename) + '.txt'# and then splits the file on newline, and then puts that into a list
 	f = open(file, 'r',encoding='utf-8')# the list is returned
 	string = f.read()
 	listvar = []
@@ -12,7 +12,7 @@ def read_in(textfilename): #this gives us a master read-in function, this reads 
 def reduce1(listname,filename): #this reduces the data to 90% of the original
 	listname = read_in(listname) 
 	counter = 0
-	filename = filename + '10'+ '.txt' #creating a file to write in
+	filename = 'data\\' + filename + '10'+ '.txt' #creating a file to write in
 	file = open(filename,'w+',encoding='utf-8')
 	for line in listname:
 		if line == "": #there is an empty line at the end of the data, we dont want to add a second
@@ -27,7 +27,7 @@ def reduce1(listname,filename): #this reduces the data to 90% of the original
 def reduce2(listname,filename): #this reduces to 80%
 	listname = read_in(listname) 
 	counter = 0
-	filename = filename + '20'+  '.txt' #creating a file to write in
+	filename = 'data\\' + filename + '20'+  '.txt' #creating a file to write in
 	file = open(filename,'w+',encoding='utf-8')
 	for line in listname:
 		counter +=1
@@ -45,7 +45,7 @@ def reduce2(listname,filename): #this reduces to 80%
 def reduce3(listname,filename): #this reduces to 70%
 	listname = read_in(listname) 
 	counter = 0
-	filename = filename + '30'+ '.txt' #creating a file to write in
+	filename = 'data\\' + filename + '30'+ '.txt' #creating a file to write in
 	file = open(filename,'w+',encoding='utf-8')
 	for line in listname:
 		counter +=1
@@ -65,7 +65,7 @@ def reduce3(listname,filename): #this reduces to 70%
 def reduce4(listname,filename): #this reduces to 60%
 	listname = read_in(listname) 
 	counter = 0
-	filename = filename + '40'+  '.txt' #creating a file to write in
+	filename = 'data\\' + filename + '40'+  '.txt' #creating a file to write in
 	file = open(filename,'w+',encoding='utf-8')
 	for line in listname:
 		counter +=1
@@ -87,7 +87,7 @@ def reduce4(listname,filename): #this reduces to 60%
 def reduce5(listname,filename): #this reduces to 50%
 	listname = read_in(listname) 
 	counter = 0
-	filename = filename +'50'+ '.txt' #creating a file to write in
+	filename = 'data\\' + filename +'50'+ '.txt' #creating a file to write in
 	file = open(filename,'w+',encoding='utf-8')
 	for line in listname:
 		counter +=1
@@ -110,7 +110,7 @@ def reduce5(listname,filename): #this reduces to 50%
 def reduce6(listname,filename): #this reduces to 60%
 	listname = read_in(listname) 
 	counter = 0
-	filename = filename +'60'+ '.txt' #creating a file to write in
+	filename = 'data\\' + filename +'60'+ '.txt' #creating a file to write in
 	file = open(filename,'w+',encoding='utf-8')
 	for line in listname:
 		counter +=1
@@ -135,7 +135,7 @@ def reduce6(listname,filename): #this reduces to 60%
 def reduce7(listname,filename): #this reduces to 70%
 	listname = read_in(listname) 
 	counter = 0
-	filename = filename +'70'+ '.txt' #creating a file to write in
+	filename = 'data\\' + filename +'70'+ '.txt' #creating a file to write in
 	file = open(filename,'w+',encoding='utf-8')
 	for line in listname:
 		counter +=1
@@ -170,5 +170,3 @@ def reduce(listname,filename):
 	reduce7(listname,filename)
 
 reduce("concatenate_input_complex","input_complex_reduced")
-reduce("italian_training_res","italian_training_reduced")
-reduce("concatenate_fre_po_sp_input","concatenate_fre_po_sp_input_reduced")

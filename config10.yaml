@@ -1,0 +1,19 @@
+
+src_vocab: data/vocab/ro_french_port_span_vocab.txt
+tgt_vocab: data/vocab/italian_vocab.txt
+# Prevent overwriting existing files in the folder
+overwrite: False
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: data/input_complex_reduced10.txt
+        path_tgt: data/italian_training_reduced10.txt
+    valid:
+        path_src: data/concatenate_val_complex.txt
+        path_tgt: data/italian_val_res.txt
+
+save_model: models/run_10reduced/model
+save_checkpoint_steps: 500
+train_steps: 10000
+valid_steps: 500

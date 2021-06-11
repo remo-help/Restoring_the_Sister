@@ -17,12 +17,12 @@ def read_in(textfilename): #this gives us a master read-in function, this reads 
 
 
 def restructure(item): #wrting this in a way that will allow me to jsut call "train" "test" etc.
-	target = 'italian_' + str(item)
+	target = 'data\\italian_' + str(item)
 	target_list =read_in(target)
-	spanish= 'spanish_' + str(item)
-	french= 'french_' + str(item)
-	romanian= 'romanian_' + str(item)
-	portuguese= 'portuguese_' + str(item)
+	spanish= 'data\\spanish_' + str(item)
+	french= 'data\\french_' + str(item)
+	romanian= 'data\\romanian_' + str(item)
+	portuguese= 'data\\portuguese_' + str(item)
 	spanish_list = read_in(spanish) #creating the lists 
 	french_list = read_in(french)
 	romanian_list = read_in(romanian)
